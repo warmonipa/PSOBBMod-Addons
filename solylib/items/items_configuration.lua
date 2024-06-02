@@ -17,7 +17,7 @@ local itemEquipped = 0xFFFFFFFF
 
 -- WEAPON
 local weaponUntekked = 0xFFFF0000
-local weaponName = 0xFFB060B0
+local weaponName = orange
 local weaponGrind = 0xFF28CC66
 local weaponSRankTitle = 0xFFFF0000
 local weaponSRankName = 0xFF2D98B7
@@ -120,16 +120,16 @@ local weaponHit =
 }
 
 -- ARMOR (Frame and Barrier)
-local armorName = 0xFFB060B0
+local armorName = blue
 local armorStats = 0xFF28CC66
 local armorSlots = 0xFFFFFF00
 
 -- ARMOR (Unit)
-local unitName = 0xFFB060B0
+local unitName = blue_light
 local unitKills = 0xFFFFFF00
 
 -- MAG
-local magName = 0xFFB060B0
+local magName = brown
 local magColor = 0xFF2D98B7
 local magStats = 0xFF28CC66
 local magPB = 0xFFFFFF00
@@ -142,15 +142,15 @@ local magFeedTimer =
 }
 
 -- TOOL
-local toolName = 0xFFB060B0
+local toolName = green
 local toolAmount = 0xFF28CC66
 
 -- TECHNIQUE
-local techName = 0xFFB060B0
+local techName = green
 local techLevel = 0xFF28CC66
 
 -- MESETA
-local mesetaName = 0xFFB060B0
+local mesetaName = yellow
 local mesetaAmount = 0xFFFFFF00
 
 return
