@@ -18,6 +18,13 @@ local magColor =
     "Fuchsia", "Grey", "Cream", "Pink", "Dark Green",
 }
 
+local magColor2 =
+{
+    "0xFFFF0000", "0XFF0000FF", "0xFFEAF718", "0XFF00FF00", "0XFF79085E", "0XFF252321", "0XFFFFFFFF",
+    "0XFF008080", "0XFF3D1C16", "0XFFFF8800", "0XFF647580", "0XFFB5B35C", "0XFF508498",
+    "0XFFFD3F92", "0XFFB9BBBE", "0XFFF8E7AF", "0XFFFF0084", "0XFF374333",
+}
+
 -- Internal function to read text from the unitxt.
 -- Note that the unitxt is reloaded at the main menu, so this function
 -- will return nil in that case.
@@ -168,6 +175,18 @@ local function GetMagColor(index)
     return magColor[index]
 end
 
+-- Reads mag color RGB
+local function GetMagColor2(index)
+    -- adjust index to lua 1 based crap
+    index = index + 1
+    if index > table.getn(magColor2) then
+        -- default mag color Brown
+        return magColor2[magColor['Brown']]
+    end
+
+    return magColor2[index]
+end
+
 local function AddServerMagColors(server)
     if server == 1 then -- Vanilla
 
@@ -207,5 +226,6 @@ return
     GetSRankName = GetSRankName,
     GetSRankSpecialName = GetSRankSpecialName,
     GetMagColor = GetMagColor,
+    GetMagColor2 = GetMagColor2,
     AddServerMagColors = AddServerMagColors,
 }

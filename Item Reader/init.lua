@@ -849,11 +849,9 @@ local function ProcessMag(item, fromMagWindow)
         end
     end
 
-    local nameColor = lib_items_cfg.magName
-    local item_cfg = lib_items_list.t[item.hex]
-    if item_cfg ~= nil and item_cfg[1] ~= 0 then
-        nameColor = item_cfg[1]
-    end
+    local colorName = lib_unitxt.GetMagColor(item.mag.color)
+    local nameColor = lib_unitxt.GetMagColor2(item.mag.color)
+
     result = result .. TextCWrapper(false, nameColor, "%s ", TrimString(item.name, options.itemNameLength))
 
     local timerColor = lib_items_cfg.white
@@ -900,7 +898,7 @@ local function ProcessMag(item, fromMagWindow)
         or (fromMagWindow and not options.mags.hideMagColor)
     then
         result = result .. TextCWrapper(false, lib_items_cfg.white, "[")
-        result = result .. TextCWrapper(false, lib_items_cfg.magColor, lib_unitxt.GetMagColor(item.mag.color))
+        result = result .. TextCWrapper(false, lib_items_cfg.magColor, colorName)
         result = result .. TextCWrapper(false, lib_items_cfg.white, "] ")
     end
 
