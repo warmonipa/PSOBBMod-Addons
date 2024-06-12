@@ -201,9 +201,19 @@ local function AddServerMagColors(server)
             "Plum", "Violet", "Goldenrod"
         }
 
+        local ephineaNewMagColors2 = {
+            "0XFFBFBF6C", "0XFF7FCEE2", "0XFF7851A9",
+            "0XFFCE2D46", "0XFF385F8F", "0XFF046307",
+            "0XFFA57C00", "0XFFC7D1DA", "0XFF88540B",
+            "0XFF9C51B6", "0XFF8806CE", "0XFFFCD667"
+        }
+
         for i=1,table.getn(ephineaNewMagColors) do
             -- 1 based indexes...
             magColor[table.getn(magColor) + 1] = ephineaNewMagColors[i]
+
+            -- add ephinea new mag RGB colors
+            magColor2[table.getn(magColor2) + 1] = ephineaNewMagColors2[i]
         end
 
     elseif server == 4 then -- Schthack
