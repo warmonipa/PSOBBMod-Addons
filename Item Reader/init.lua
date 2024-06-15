@@ -898,7 +898,7 @@ local function ProcessMag(item, fromMagWindow)
         or (fromMagWindow and not options.mags.hideMagColor)
     then
         result = result .. TextCWrapper(false, lib_items_cfg.white, "[")
-        result = result .. TextCWrapper(false, lib_items_cfg.magColor, colorName)
+        result = result .. TextCWrapper(false, nameColor, colorName)
         result = result .. TextCWrapper(false, lib_items_cfg.white, "] ")
     end
 
